@@ -1,24 +1,4 @@
-import sys
-import binascii
-
-#read input from stdin
-textIn = sys.stdin.read()
-
-#file name for the key is key
-fileName= "key"
-#open file key
-f = open(fileName) 
-#read key and store it as a string in keywords
-keywords = f.read()
-
-#first convert the input and key to ascii values
-a = binascii.hexlify(textIn)
-b = binascii.hexlify(keywords)
-
-
-#convert that into an integer
-#preform xor operation on the integer value
-value = (int(a, 16) ^ int(b, 16))###################
+###################
 #
 # Team Phoenix
 # XOR Cipher
