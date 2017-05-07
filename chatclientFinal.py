@@ -52,7 +52,3 @@ while(i < len(covert_bin)):
 		break
 covert = covert[:len(covert)-3]
 print covert
-
-
-
-
