@@ -3,17 +3,23 @@
 # Team Phoenix
 # XOR Cipher
 # May 4, 2017
+# run with:
+#	python xor.py keyfilename < inputfile > outputfile
 #
 ###################
 
+
 import sys
 import binascii
+
+#take argument as name of the key file
+fileName = sys.argv[1]
 
 #read input from stdin
 textIn = sys.stdin.read()
 
 #file name for the key is key
-fileName= "key"
+#fileName= "key"
 
 #open file key
 f = open(fileName) 
@@ -28,13 +34,6 @@ b = binascii.hexlify(keywords)
 #convert into an integer
 #perform xor operation on the integer value
 value = (int(a, 16) ^ int(b, 16))
-
-#convert the integers back to ascii characters and print the result to stdout
-sys.stdout.write(binascii.unhexlify('%x' % value))
-
-#close the file object
-f.close()
-
 
 #convert the integers back to ascii characters and print the result to stdout
 sys.stdout.write(binascii.unhexlify('%x' % value))
